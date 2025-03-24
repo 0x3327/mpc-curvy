@@ -4,15 +4,24 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "benchmark1"
-path = "src/benchmarks/main.rs"
-
-[[bin]]
 name = "cli" 
 path = "src/on_chain/cli/main.rs"
 
 [dependencies]
+ark-bn254 = "0.5.0"
+ark-ec = "0.5.0"
+ark-ff = "0.5.0"
+ark-std = "0.5.0"
+ark-serialize = "0.5.0"
+crypto-bigint = "0.6.1"
+hex = "0.4.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rand = "0.8.0"
+secp256k1 = {version = "0.30.0", features = ["rand", "std"]}
+sha3 = "0.10.8"
+sha2 = "0.10.8"
 
 [[test]]
-name = "mpc_tests" 
-path = "src/tests/mpc_tests.rs"
+name = "sap_tests" 
+path = "src/tests/sap_tests.rs"
